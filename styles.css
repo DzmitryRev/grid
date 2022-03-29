@@ -45,7 +45,7 @@ body {
 }
 .header-section__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 370px));
+  grid-template-columns: repeat(2, minmax(auto, 370px));
   grid-template-areas:
     "a a"
     "b c";
