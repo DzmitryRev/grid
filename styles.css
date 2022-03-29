@@ -166,9 +166,38 @@ body {
 }
 
 
+/* GALLERY-SECTION */
+
+.gallery-section {
+    padding: 35px 0;
+}
+
+.gallery-section__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery-section__grid-item {
+    
+}
+
+.gallery-section__grid-item > img {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /* MEDIA */
+
+@media screen and (max-width: 968px) {
+    .gallery-section__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .container {
