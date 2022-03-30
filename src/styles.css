@@ -178,9 +178,9 @@ body {
     grid-gap: 10px;
 }
 
-.gallery-section__grid-item {
+/* .gallery-section__grid-item {
     
-}
+} */
 
 .gallery-section__grid-item > img {
     width: 100%;
