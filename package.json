@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/DzmitryRev/grid/issues"
   },
-  "homepage": "https://github.com/DzmitryRev/grid#readme"
+  "homepage": "https://github.com/DzmitryRev/grid#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
 }
