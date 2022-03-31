@@ -25,13 +25,14 @@ module.exports = {
   //   devtool: "source-map",
   entry: "./src/index.js",
   devServer: {
-    hot: true,
+    // hot: true,
   },
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "assets/[hash][ext][query]",
+    assetModuleFilename: "assets/[name][ext][query]",
     clean: true,
+    // publicPath: "./",
   },
 
   module: {
