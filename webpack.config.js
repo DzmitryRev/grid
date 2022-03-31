@@ -30,7 +30,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "assets/[name][ext]",
+    assetModuleFilename: "assets/[hash][ext][query]",
     clean: true,
   },
 
