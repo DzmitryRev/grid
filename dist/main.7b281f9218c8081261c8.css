@@ -1,0 +1,327 @@
+/*!****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \****************************************************************************************************************************************************/
+/* GLOBAL */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #e6e6e6;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* MIXINS */
+/* WRAPPER */
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* CONTAINER */
+.container {
+  padding: 0 55px;
+}
+
+/* HEADER-SECTION */
+.header-section {
+  padding: 35px 0;
+  position: relative;
+  border-bottom: 2px solid #e6e6e6;
+}
+.header-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 370px));
+  grid-template-areas: "a a" "b c";
+}
+.header-section__item-1 {
+  font-size: 66px;
+  font-weight: 600;
+  line-height: 96px;
+  grid-area: a;
+  align-self: center;
+  padding: 15px;
+  position: relative;
+  z-index: 0;
+}
+.header-section__item-1::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 114px;
+  max-width: 400px;
+  min-width: 40%;
+  background-color: #d48166;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.header-section__item-2 {
+  font-size: 16px;
+  font-weight: auto;
+  line-height: auto;
+  grid-area: b;
+  padding: 15px;
+  letter-spacing: 1px;
+}
+.header-section__item-2 p {
+  margin-bottom: 30px;
+}
+.header-section__item-3 {
+  font-size: 16px;
+  font-weight: auto;
+  line-height: auto;
+  letter-spacing: 1px;
+  grid-area: c;
+  padding: 10px;
+  color: #999999;
+  font-style: italic;
+}
+.header-section__item-3 > div {
+  padding: 5px 25px;
+  position: relative;
+}
+.header-section__item-3 > div::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: #d48166;
+  top: 0;
+  left: 0;
+}
+.header-section__link {
+  font-style: italic;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #d48166;
+}
+
+/* DESCRIPTION-SECTION */
+.description-section {
+  padding: 35px 0;
+}
+
+.description-section__container {
+  padding: 60px 30px 60px 60px;
+  position: relative;
+  z-index: 0;
+}
+
+.description-section__container > h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description-section__container > p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.description-section__container::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #d48166;
+}
+
+.description-section__container::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 45%;
+  background-color: #e6e6e6;
+  z-index: -1;
+}
+
+/* GALLERY-SECTION */
+.gallery-section {
+  padding: 35px 0;
+}
+
+.gallery-section__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* .gallery-section__grid-item {
+
+} */
+.gallery-section__grid-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ACTICLES */
+.articles-section {
+  padding: 30px 0;
+}
+.articles-section .article {
+  display: flex;
+}
+.articles-section .article__description {
+  flex: 1 0 50%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.articles-section .article__description h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.articles-section .article__description h1::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 60%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d48166;
+  z-index: -1;
+}
+.articles-section .article__description P {
+  font-size: 16px;
+  font-weight: auto;
+  line-height: 26px 400;
+  margin-bottom: 20px;
+}
+.articles-section .article__image {
+  flex: 1 0 50%;
+  max-height: 375px;
+}
+.articles-section .article__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER SECTION */
+.footer-section {
+  padding: 55px 0;
+  position: relative;
+  z-index: 1;
+}
+.footer-section::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  background-color: #bebebe;
+  z-index: -1;
+}
+.footer-section__container {
+  display: flex;
+  align-items: center;
+}
+.footer-section__container div {
+  padding-right: 30%;
+}
+.footer-section__container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.footer-section__container p {
+  font-size: 16px;
+  font-weight: auto;
+  line-height: auto;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.footer-section__container p:last-of-type {
+  margin-bottom: 15px;
+}
+
+/* MEDIA */
+@media screen and (max-width: 968px) {
+  .gallery-section__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  .articles-section .article:last-of-type {
+    flex-direction: column-reverse;
+  }
+  .articles-section .article {
+    align-items: center;
+    flex-direction: column;
+  }
+  .articles-section .article__description {
+    max-width: 400px;
+    padding: 10px 15px;
+  }
+  .articles-section .article__image {
+    max-width: 475px;
+  }
+
+  .footer-section__container div {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .header-section__grid {
+    grid-template-areas: "a a" "b b" "c c";
+  }
+
+  .header-section__item-1 {
+    font-size: 46px;
+    line-height: 66px;
+  }
+
+  .description-section__container {
+    padding: 20px 10px 20px 20px;
+  }
+}
+
+/*# sourceMappingURL=main.7b281f9218c8081261c8.css.map*/
