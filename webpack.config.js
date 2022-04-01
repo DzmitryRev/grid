@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
 
 const plugins = [
   new MiniCssExtractPlugin({
-    filename: "[name].css",
+    filename: "[name].[contenthash].css",
   }),
   new HtmlWebpackPlugin({
     template: "./src/index.html",
@@ -22,17 +22,21 @@ module.exports = {
   mode,
   target,
   plugins,
-  //   devtool: "source-map",
+  devtool: "source-map",
   entry: "./src/index.js",
   devServer: {
-    // hot: true,
+    hot: true,
+    static: {
+      directory: path.join(__dirname, "./dist"),
+    },
+    port: 9000,
+    compress: true,
   },
 
   output: {
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[name][ext][query]",
     clean: true,
-    // publicPath: "./",
   },
 
   module: {
@@ -40,11 +44,21 @@ module.exports = {
       { test: /\.(html)$/, use: ["html-loader"] },
       {
         test: /\.(s[ac]|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
         type: mode === "production" ? "asset" : "asset/resource",
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true,
+          },
+        },
       },
     ],
   },
